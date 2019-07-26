@@ -20,18 +20,57 @@
         </ul>
       </div>
       <div class="tab-content" id="v-pills-tabContent">
-        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-          <ul class="list-group">
+        <div class="tab-pane fade show active text-center " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+          <div class="d-flex justify-content-around">
+            <p>Number of Registered: {{countF}} </p>
+          </div>
             {{#each users}}
-              <li class="list-group-item">{{this.name}} todos</li>
-            {{/each}} 
+          <ul class="list-group">
+              <li class="list-group-item"> 
+                Name: {{this.name}} <br>
+                Email: {{this.email}} <br>
+                BirthDay: {{this.date}} <br>
+                Neighbourhood: {{this.bairo}} <br>
+                City: {{this.city}} <br>
+                Cupom: {{this.status}} <br>
+              </li>
           </ul>
+            {{/each}} 
         </div>
-        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-          {{#each userPending}} {{this.name}} <br> {{/each}} pendentes
+        <div class="tab-pane fade text-center" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+          <div class="d-flex justify-content-around">
+            <p>Number of Registered with Pending Cupom: {{countP}} </p>
+          </div>
+            {{#each userPending}}
+          <ul class="list-group">
+              <li class="list-group-item"> 
+                Name: {{this.name}} <br>
+                Email: {{this.email}} <br>
+                BirthDay: {{this.date}} <br>
+                Neighbourhood: {{this.bairo}} <br>
+                City: {{this.city}} <br>
+                Cupom: {{this.status}} <br>
+              </li>
+          </ul>
+            {{/each}} 
         </div>
-        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-          {{#each userActive}} {{this.name}} <br> {{/each}} ativos
+        <div class="tab-pane fade text-center" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+          <div class="d-flex justify-content-around">
+            <p>Number of Registered with Active Cupom: {{countA}} </p>
+          </div>
+            
+          {{#each userActive}}
+          <ul class="list-group">
+              <li class="list-group-item"> 
+                Name: {{this.name}} <br>
+                Email: {{this.email}} <br>
+                BirthDay: {{this.date}} <br>
+                Neighbourhood: {{this.bairo}} <br>
+                City: {{this.city}} <br>
+                Cupom: {{this.status}} <br>
+              </li>
+          </ul>
+            {{/each}} 
         </div>
         <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
       </div>

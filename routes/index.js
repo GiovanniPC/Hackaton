@@ -29,14 +29,19 @@ router.get("/dashboard", ensureLogin.ensureLoggedIn("/admin"), (req, res) => {
   User.find().then(users => {
     let userPending = [];
     let userActive = [];
+    let countP = 0;
+    let countA = 0;
     users.forEach(element => {
       if(element.status === 'Pending'){
+        countP += 1;
         userPending.push(element);
       } else if(element.status === 'Active'){
+        countA += 1;
         userActive.push(element);
       }
     });
-    res.render("dashboard", { admin: req.user, users: users , userPending, userActive});
+    let countF = countA + countP;
+    res.render("dashboard", { admin: req.user, users: users , userPending, userActive, countA, countP, countF});
   })
 });
 
@@ -95,7 +100,7 @@ router.post('/', (req, res) => {
 
         console.log('sendmail');
         transporter.sendMail({
-          from:  '"My Awesome Project 👻" <cocogoods@ironhackers.dev>',
+          from:  '"My Awesome Project 👻" <cocogoods@gin.ink>',
           to: email,
           subject: 'Welcome to Lab Nodemail! Please confirm your account.',
           text: `Please, click on the link below to confirm your account: ${process.env.BASE_URL}/${confirmationCode}`,
