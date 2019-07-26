@@ -1,26 +1,42 @@
-<h1>FOI PORRA!!</h1>
-<p>{{admin}}</p>
-<a href="/logout">SAI </a>
-<br>
-<br>
-<br>
-{{#each users}}
-{{this.name}}
-<br>
-{{/each}}
+<nav class="navbar navbar-dark fixed-top bg-cocogoods flex-md-nowrap pt-2 pb-2 shadow">
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Cocogoods by SuperFood, INC</a>
+</nav>
+<div class="container-fluid">
+  <div class="row mheader">
+    <div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-2 pt-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">All</a>
+        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Pendings</a>
+        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Ativos</a>
+      </div>
+    </div>
+    <div class="col-9 col-sm-10 col-md-10 col-lg-10 col-xl-10 pt-2">
+      <div class="d-flex justify-content-between">
+        <h3>Registered</h3>
+        <ul class="navbar-nav px-3">
+          <li class="nav-item text-nowrap">
+            <a class="nav-link" href="/logout">Sair</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+          <ul class="list-group">
+            {{#each users}}
+              <li class="list-group-item">{{this.name}} todos</li>
+            {{/each}} 
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+          {{#each userPending}} {{this.name}} <br> {{/each}} pendentes
+        </div>
+        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+          {{#each userActive}} {{this.name}} <br> {{/each}} ativos
+        </div>
+        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+      </div>
+    </div>
 
-<br><br><br>
+  </div>
+</div>
 
-{{#each userPending}}
-
-{{this.name}}
-<br>
-{{/each}}
-
-<br><br><br>
-
-{{#each userActive}}
-
-{{this.name}}
-<br>
-{{/each}}

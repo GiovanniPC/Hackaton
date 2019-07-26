@@ -6,6 +6,14 @@ a {
   color: #00B7FF;
 }
 
+.bg-cocogoods {
+  background-color: #D97B54 ;
+}
+
+.mheader {
+  margin-top: 50px;
+}
+
 section {
   display: flex;
   justify-items: center;
@@ -14,7 +22,7 @@ section {
 
 #map {
   height: 60vh;
-  width: 40%;
+  /* width: 40%; */
 }
 
 #section1 {
@@ -44,3 +52,4 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
