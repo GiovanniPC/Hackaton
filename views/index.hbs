@@ -1,100 +1,135 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">COCOGOODS</a>
+<nav class="navbar navbar-expand-lg bg-transparent">
+  <div class="container">
+  <a class="navbar-brand" href="#"><img src="./images/LOGO.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  </div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <div class="mr-auto"></div>
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#section1">SOBRE</a>
+        <a class="nav-link MENU-Ubuntu-14pt" href="#section1">SOBRE</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#section2">NUTRIÇÃO</a>
+        <a class="nav-link MENU-Ubuntu-14pt" href="#section2">NUTRIÇÃO</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#section3">BENEFÍCIOS</a>
+        <a class="nav-link MENU-Ubuntu-14pt" href="#section3">BENEFÍCIOS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#section4">CUPOM</a>
+        <a class="nav-link MENU-Ubuntu-14pt" href="#section4">CUPOM</a>
       </li>
     </ul>
   </div>
 </nav>
 
-<section id="section1" class="d-flex justify-content-center">
-  <h1></h1>
-<p>teste1</p>
+<section id="section1" class="pt-5">
+  <div class="container">
+    <div class="d-flex flex-column align-items-center">
+      <h1 class="TITULO-Raleway-40pt text-center">Saboroso, refrescante e versátil.</h1>
+      <p class="TEXTO-Raleway-22pt pt-3 pb-3">A chave para a sua hidratação e nutrição diária.</p>
+    </div>
+  </div>
 </section>
 
-<section id="section2" class="d-flex justify-content-center">
-<p>teste2</p>
+<section id="section2" class="pt-5">
+  <div class="container">
+    <div class="d-flex flex-column align-items-center">
+      <h1 class="TITULO-Raleway-40pt text-center">Você sabia que o coco é um Superfood?</h1>
+      <p class="TEXTO-Raleway-22pt pt-3 pb-3">Ele fortalece o <b>sistema imunológico</b>, melhora o funcionamento da
+      tireóide, aumenta a disposição e queima gorduras.</p>
+      <p class="TEXTO-Raleway-22pt pt-3 pb-3">A água de coco contém <b>vitaminas naturais</b>, (cálcio, ferro, manganês,
+      magnésio e zinco), eletrólitos e enzimas nutritivas.</p>
+      </div>
+    </div>
+  </section>
+
+<section id="section3" class="pt-4">
+  <div class="container">
+    <div class="d-flex flex-column align-items-center">
+      <h1 class="TITULO-Raleway-40pt text-center">O coco é tão nutritivo, que é uma das
+    frutas mais saudáveis do Mundo.</h1>
+    </div>
+  </div>
 </section>
 
-<section id="section3" class="d-flex justify-content-center">
-<p>teste3</p>
-</section>
-
-<section id="section4" class="d-flex justify-content-center">
-<p>teste4</p>
+<section id="section4" class="pt-5">
+  <div class="container">
+    <div class="d-flex flex-column align-items-center">
+      <h1 class="TITULO-Raleway-40pt text-center">Confira os maiores benefícios do
+    Cocogoods!</h1>
+      <p class="TEXTO-Raleway-22pt pt-3 pb-3">teste4</p>
+    </div>
+  </div>
 </section>
 
 <section id="section5">
-  {{#if user}}
-  <div class="d-flex justify-content-center text-center col-lg-6">
-    <h1>CUPOM GERADO</h1>
-  </div>
-  {{else}}
-  <div class="d-flex flex-column justify-content-center text-center col-lg-6">
-    <h1>CUPOM</h1>
+  <div class="container">
+    <div class="row d-flex flex-row-reverse">
+      <div class="col-6col-12 col-sm-12 col-md-6 col-lg-6 o col-xl-6">
+        <h1 class="TITULO-Raleway-40pt text-center">Quer um cupom?</h1>
+        <form action="/" method="POST" id="form-container">
+          <div class="sign-input form-group">
+            <label for="name">Nome Completo</label>
+            <input id="name" class="input-form form-control" type="text" name="name" placeholder="Nome Completo">
+          </div>
+
+          <div class="sign-input form-group">
+            <label for="email">Email</label>
+            <input id="email" class="input-form form-control" type="text" name="email" placeholder="me@domain.com">
+          </div>
+
+          <div class="sign-input form-group">
+            <label for="birthDay"> Data de Nascimento</label>
+            <input id="birthDay" class="input-form form-control" type="date" name="birthDay" >
+          </div>
+
+          <div class="sign-input form-group">
+            <label for="city">Cidade</label>
+            <input id="city" class="input-form form-control" type="text" name="city" placeholder="Cidade">
+          </div>
+
+          <div class="sign-input form-group">
+            <label for="bairro">Bairro</label>
+            <input id="bairro" class="input-form form-control" type="text" name="bairro" placeholder="Bairro">
+          </div>
+
+          {{#if message}}
+            <div class="alert alert-danger d-inline-flex justify-content-center p-2 text-center mb-2 rounded" >{{ message }}</div>
+          {{/if}}
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-sign">Enviar</button>
+          </div>
+
+        </form>
+      </div>
+
+        <div class="col-6col-12 col-sm-12 col-md-6 col-lg-6 o col-xl-6">
+        {{#if user}}
+        <div class="d-flex justify-content-center text-center">
+          <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <img src="./images/CUPOM-NAO-RESGATADO.jpg" alt="">
+          </div>
+        </div>
+        {{else}}
+        <div class="d-flex justify-content-center text-center">
+        <h1>CUPOM</h1>
         {{#if tokenMessage}}
-      <div class="alert alert-danger d-inline-flex justify-content-center p-2 text-center mb-2 rounded" >{{ tokenMessage }}</div>
-    {{/if}}
-  </div>
-
-  {{/if}}
-  <div class="container d-flex flex-column justify-content-center text-center col-lg-6">
-    <h2>Form</h2>
-    <form action="/" method="POST" id="form-container">
-      <div class="sign-input form-group">
-        <label for="name">Nome Completo</label>
-        <input id="name" class="input-form form-control" type="text" name="name" placeholder="Nome Completo">
-      </div>
-
-      <div class="sign-input form-group">
-        <label for="email">Email</label>
-        <input id="email" class="input-form form-control" type="text" name="email" placeholder="me@domain.com">
-      </div>
-
-      <div class="sign-input form-group">
-        <label for="birthDay"> Data de Nascimento</label>
-        <input id="birthDay" class="input-form form-control" type="date" name="birthDay" >
-      </div>
-
-      <div class="sign-input form-group">
-        <label for="city">Cidade</label>
-        <input id="city" class="input-form form-control" type="text" name="city" placeholder="Cidade">
-      </div>
-
-      <div class="sign-input form-group">
-        <label for="bairro">Bairro</label>
-        <input id="bairro" class="input-form form-control" type="text" name="bairro" placeholder="Bairro">
-      </div>
-      {{#if message}}
-      <div class="alert alert-danger d-inline-flex justify-content-center p-2 text-center mb-2 rounded" >{{ message }}</div>
-      {{/if}}
-      <br><br>
-
-      <button type="submit" class="btn btn-primary btn-sign">Enviar</button>
-
-    </form>
-  </div>
+        <div class="alert alert-danger d-inline-flex justify-content-center p-2 text-center mb-2 rounded" >{{ tokenMessage }}</div>
+        {{/if}}
+        </div>
+        {{/if}}
+        </div>
+        </div>
 <p>{{user}}</p>
 </section>
 
 <section id="section6">
+  <div class="col-12 col-sm-12 col-md-6 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3"
   <div id="map"></div>
 </section>
 

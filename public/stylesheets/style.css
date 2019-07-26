@@ -1,8 +1,29 @@
-body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+/*
+:root {
+  --white: #ffffff;
+  --pale: #ece8e3;
+  --pinkish-brown: #b97b54;
+  --dirt-brown: #563c2c;
+  --camo-green: #473329;
+}
+*/
+a:link, a:hover, a:visited {
+  color: #563c2c; }
 
-a {
-  color: #00B7FF; }
+section .container h1 {
+  margin: 0 auto;
+  width: 70vw; }
+
+section .container p {
+  margin: 0 auto;
+  width: 70vw;
+  text-align: center; }
+
+input {
+  border: 2px solid #563c2c; }
+
+#navbarSupportedContent > a {
+  color: #563c2c; }
 
 .bg-cocogoods {
   background-color: #D97B54; }
@@ -10,10 +31,11 @@ a {
 .mheader {
   margin-top: 50px; }
 
-section {
+/* section {
   display: flex;
-  justify-items: center; }
-
+  justify-items: center;
+  // align-items: center;
+} */
 #map {
   height: 60vh;
   width: 40%; }
@@ -21,24 +43,40 @@ section {
 #section1 {
   height: 100vh;
   background-image: url("../images/BG-HEADER.jpg");
+  background-position-x: center;
+  background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: cover; }
 
 #section2 {
   height: 100vh;
   background-image: url("../images/BG1.jpg");
+  background-position-x: center;
+  background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: cover; }
 
 #section3 {
   height: 100vh;
   background-image: url("../images/BG2-DESK.png");
+  background-position-x: center;
+  background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: cover; }
 
 #section4 {
   height: 100vh;
   background-image: url("../images/BG3.jpg");
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#section5 {
+  background-color: #ece8e3;
+  /* #563c2c */
+  background-position-x: center;
+  background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: cover; }
 
