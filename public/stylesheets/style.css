@@ -1,5 +1,4 @@
 body {
-  /* padding: 50px; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
@@ -19,5 +18,7 @@ section {
 #map {
   height: 60vh;
   /* width: 40%; */ }
+
+/* */
 
 /*# sourceMappingURL=style.css.map */
