@@ -1,13 +1,14 @@
-<style>
-    #map {
-        height: 60vh;
-        width: 100%;
-    }
-</style>
-
-
-<section class="signup">
-  <div class="signup-form2 container d-flex flex-column justify-content-center text-center col-lg-4">
+<section>
+  {{#if user}}
+  <div class="d-flex justify-content-center text-center col-lg-6">
+    <h1>CUPOM GERADO</h1>
+  </div>
+  {{else}}
+  <div class="d-flex justify-content-center text-center col-lg-6">
+    <h1>CUPOM</h1>
+  </div>
+  {{/if}}
+  <div class="container d-flex flex-column justify-content-center text-center col-lg-6">
     <h2>Form</h2>
     <form action="/" method="POST" id="form-container">
       <div class="sign-input form-group">
