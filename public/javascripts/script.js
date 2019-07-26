@@ -40,30 +40,36 @@ function startMap() {
 
     });
 
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      function(position) {
-        const user_location = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        };
-        console.log(user_location);
-        // Add a marker for your user location
-        const userLocation = new google.maps.Marker({
-          position: {
-            lat: user_location.lat,
-            lng: user_location.lng
-          },
-          map: map,
-          title: "You are here."
-        });
+  // if (navigator.geolocation) {
+  //   navigator.geolocation.getCurrentPosition(
+  //     function(position) {
+  //       const user_location = {
+  //         lat: position.coords.latitude,
+  //         lng: position.coords.longitude
+  //       };
+  //       console.log(user_location);
+  //       // Add a marker for your user location
+  //       const userLocation = new google.maps.Marker({
+  //         position: {
+  //           lat: user_location.lat,
+  //           lng: user_location.lng
+  //         },
+  //         map: map,
+  //         title: "You are here."
+  //       });
 
-        map.setCenter(user_location);
-      }
-    );
-  } else {
-    console.log("Browser does not support geolocation.");
-  }
+  //       map.setCenter(user_location);
+  //     }
+  //   );
+  // } else {
+  //   console.log("Browser does not support geolocation.");
+  // }
+
+  const userLocation = new google.maps.Marker({
+    position: SP,
+    map: map,
+    title: "You are here."
+  });
 }
 
 startMap();
