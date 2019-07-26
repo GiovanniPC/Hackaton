@@ -8,6 +8,7 @@ const userSchema = new Schema(
     status: { type: String, enum: ["Active", "Pending"], default: "Pending" },
     date: String,
     city: String,
+    bairro: String,
     token: String,
   },
   {

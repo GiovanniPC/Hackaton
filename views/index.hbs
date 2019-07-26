@@ -20,21 +20,25 @@
         <input id="name" class="input-form form-control" type="text" name="name" placeholder="Nome Completo">
       </div>
 
-      <div class="">
+      <div class="sign-input form-group">
         <label for="email">Email</label>
         <input id="email" class="input-form form-control" type="text" name="email" placeholder="me@domain.com">
       </div>
 
-      <div class="sign-input form-group name-sign">
+      <div class="sign-input form-group">
         <label for="birthDay"> Data de Nascimento</label>
-        <input id="birthDay" class="input-form form-control" type="date" name="birthDay" placeholder="First name">
+        <input id="birthDay" class="input-form form-control" type="date" name="birthDay" >
       </div>
 
-      <div class="">
+      <div class="sign-input form-group">
         <label for="city">Cidade</label>
-        <input id="city" class="input-form form-control" type="text" name="city" placeholder=" Cidade">
+        <input id="city" class="input-form form-control" type="text" name="city" placeholder="Cidade">
       </div>
 
+      <div class="sign-input form-group">
+        <label for="bairro">Bairro</label>
+        <input id="bairro" class="input-form form-control" type="text" name="bairro" placeholder="Bairro">
+      </div>
       {{#if message}}
       <div class="alert alert-danger d-inline-flex justify-content-center p-2 text-center mb-2 rounded" >{{ message }}</div>
       {{/if}}

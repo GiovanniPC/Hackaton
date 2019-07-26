@@ -1,0 +1,22 @@
+<section class="signup">
+  <div class="signup-form2 container d-flex flex-column justify-content-center text-center col-lg-4">
+    <h2>Sign In</h2>
+    <form action="/admin" method="POST">
+      <div class="sign-input form-group">
+        <label for="exampleInputUsername1">Username</label>
+        <input id="username" class="input-form form-control" type="text" name="username" placeholder="JonSnow">
+      </div>
+      <div class="sign-input form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input id="password" class="input-form form-control" type="password" name="password"
+          placeholder="Your password">
+      </div>
+      {{#if message}}
+      <div class="lert alert-danger d-inline-flex justify-content-center p-2 mb-4 mt-4 rounded text-center">{{ message }}</div>
+      {{/if}}
+      <div>
+        <button type="submit" class="btn btn-primary btn-sign">Sign In</button>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,13 +1,49 @@
 const express = require('express');
 const router  = express.Router();
 const User = require('../models/user');
+const passport = require("passport");
+const ensureLogin = require("connect-ensure-login");
+
+const bcrypt = require("bcrypt");
+const bcryptSalt = 10;
 
 router.get('/', (req, res) => {
   res.render('index', { GMAPS: process.env.GMAPS });
 });
 
+router.get('/admin', (req, res) => {
+  res.render('login');
+});
+
+router.get("/logout", (req, res) => {
+  req.logout();
+  res.redirect("/");
+});
+
+router.post("/admin", passport.authenticate("local", {
+    successRedirect: "/dashboard",
+    failureRedirect: "/admin",
+    failureFlash: true,
+    passReqToCallback: true})
+);
+
+router.get("/dashboard", ensureLogin.ensureLoggedIn("/admin"), (req, res) => {
+  User.find().then(users => {
+    let userPending = [];
+    let userActive = [];
+    users.forEach(element => {
+      if(element.status === 'Pending'){
+        userPending.push(element);
+      } else if(element.status === 'Active'){
+        userActive.push(element);
+      }
+    });
+    res.render("dashboard", { admin: req.user, users: users , userPending, userActive});
+  })
+});
+
 router.post('/', (req, res) => {
-  const { name, birthDay, email, city } = req.body;
+  const { name, birthDay, email, city , bairro } = req.body;
 
   const characters ="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let token = "";
@@ -20,7 +56,8 @@ router.post('/', (req, res) => {
     name === "" ||
     birthDay === "" ||
     email === "" ||
-    city === ""
+    city === "" ||
+    bairro === ""
   ) {
     res.render("index", {
       message: "Algum dos campos ficou vazio!",
@@ -40,10 +77,12 @@ router.post('/', (req, res) => {
       email,
       date: birthDay,
       city,
+      bairro,
       token: confirmationCode
     });
 
     newUser.save().then(info => res.redirect("/")).catch(error => console.log(error));
+
   })
   .catch(err => {
     res.render("index", { message: "Algo deu errado!", GMAPS: process.env.GMAPS });
@@ -68,6 +107,5 @@ router.get('/:id', (req, res) => {
   });
 
 });
-
 
 module.exports = router;
