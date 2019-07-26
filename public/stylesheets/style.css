@@ -1,9 +1,15 @@
 body {
-  padding: 50px;
+  /* padding: 50px; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
   color: #00B7FF; }
+
+.bg-cocogoods {
+  background-color: #D97B54; }
+
+.mheader {
+  margin-top: 50px; }
 
 section {
   display: flex;
@@ -12,6 +18,6 @@ section {
 
 #map {
   height: 60vh;
-  width: 40%; }
+  /* width: 40%; */ }
 
 /*# sourceMappingURL=style.css.map */
