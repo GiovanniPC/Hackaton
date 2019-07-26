@@ -10,6 +10,7 @@ const userSchema = new Schema(
     city: String,
     bairro: String,
     token: String,
+
   },
   {
     timestamps: true
