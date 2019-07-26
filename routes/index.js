@@ -5,9 +5,6 @@ const User = require('../models/user');
 const passport = require("passport");
 const ensureLogin = require("connect-ensure-login");
 
-const bcrypt = require("bcrypt");
-const bcryptSalt = 10;
-
 router.get('/', (req, res) => {
   res.render('index', { GMAPS: process.env.GMAPS });
 });
@@ -69,7 +66,7 @@ router.post('/', (req, res) => {
 
   User.findOne({ email }).then(user => {
     if (user !== null) {
-      res.render("index", { message: "Email já foi utilizado", GMAPS: process.env.GMAPS });
+      res.render("index", { message: "Email já cadastrado!", GMAPS: process.env.GMAPS });
       return;
     }
 
@@ -133,7 +130,7 @@ router.get('/:id', (req, res) => {
   User.find({token: id}).then(user => {
 
     if(user[0].status === 'Active'){
-      res.render('index', {tokenMessage: 'Cupom Já recuperado!', GMAPS: process.env.GMAPS})
+      res.render('index', {tokenMessage: 'Oops parece que esse cupom já foi utilizado!', GMAPS: process.env.GMAPS})
     }
   }).catch(err => console.log(err));
 
