@@ -17,6 +17,7 @@ const MongoStore = require("connect-mongo")(session);
 
 const Admin = require("./models/admin");
 
+
 mongoose
   .connect(process.env.MONGODB_URI, { useNewUrlParser: true })
   .then(x => {
@@ -50,6 +51,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
+
 app.use(flash());
 
 
@@ -108,6 +110,7 @@ passport.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
+
 
 const index = require('./routes/index');
 app.use('/', index);
