@@ -4,9 +4,13 @@
     <h1>CUPOM GERADO</h1>
   </div>
   {{else}}
-  <div class="d-flex justify-content-center text-center col-lg-6">
+  <div class="d-flex flex-column justify-content-center text-center col-lg-6">
     <h1>CUPOM</h1>
+        {{#if tokenMessage}}
+      <div class="alert alert-danger d-inline-flex justify-content-center p-2 text-center mb-2 rounded" >{{ tokenMessage }}</div>
+    {{/if}}
   </div>
+
   {{/if}}
   <div class="container d-flex flex-column justify-content-center text-center col-lg-6">
     <h2>Form</h2>
@@ -44,9 +48,7 @@
 
 <p>{{user}}</p>
 
-{{#if tokenMessage}}
-<div class="alert alert-danger d-inline-flex justify-content-center p-2 text-center mb-2 rounded" >{{ tokenMessage }}</div>
-{{/if}}
+
 
 <div id="map"></div>
 <script src="https://maps.googleapis.com/maps/api/js?key={{GMAPS}}"></script>

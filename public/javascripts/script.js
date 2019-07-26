@@ -50,10 +50,10 @@ function startMap() {
     'Av. Imirim	1217',
     'Av. Roque Petroni Júnior 1089'];
 
-    places.forEach(element => {
-      console.log(element)
-      geocodeAddress(geocoder, map, element);
-    });
+    // places.forEach(element => {
+    //   console.log(element)
+    //   geocodeAddress(geocoder, map, element);
+    // });
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
@@ -64,7 +64,7 @@ function startMap() {
         };
 
         // Center map with user location
-        map.setCenter(user_location);
+        // map.setCenter(user_location);
 
         // Add a marker for your user location
         const userLocation = new google.maps.Marker({
@@ -75,6 +75,8 @@ function startMap() {
           map: map,
           title: "You are here."
         });
+
+        map.setCenter(user_location);
       }
     );
   } else {
