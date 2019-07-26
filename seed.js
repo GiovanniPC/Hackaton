@@ -1,19 +1,23 @@
 require("dotenv").config();
 const mongoose = require('mongoose');
-const User = require('./models/user');
+const Admin = require('./models/admin');
+
+const bcrypt = require("bcrypt");
+const bcryptSalt = 10;
+
+const salt = bcrypt.genSaltSync(bcryptSalt);
 
 mongoose.connect(`${process.env.MONGODB_URI}`);
 
-const goUser = [
+const goAdmin = [
     {
-        firstName: 'teste',
-        lastName: 'teste',
-        email: 'killgpc@hotmail.com',
+        username: 'admin',
+        password: bcrypt.hashSync('admin', salt)
     }
 ];
 
-User.create(goUser, (err) => {
+Admin.create(goAdmin, (err) => {
     if (err) { throw(err) }
-    console.log(`Created ${goUser.length} User`);
+    console.log(`Created ${goAdmin.length} Admin`);
     mongoose.connection.close();
   });

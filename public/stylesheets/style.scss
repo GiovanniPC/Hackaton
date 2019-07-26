@@ -6,3 +6,15 @@ body {
 a {
   color: #00B7FF;
 }
+
+section {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+#map {
+  height: 60vh;
+  width: 40%;
+}
+

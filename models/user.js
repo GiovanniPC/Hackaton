@@ -3,12 +3,14 @@ const { Schema } = mongoose;
 
 const userSchema = new Schema(
   {
-    firstName: String,
-    lastName: String,
+    name: String,
     email: { type: String, unique: true },
     status: { type: String, enum: ["Active", "Pending"], default: "Pending" },
     date: String,
     city: String,
+    bairro: String,
+    token: String,
+
   },
   {
     timestamps: true
