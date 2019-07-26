@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
@@ -7,11 +6,34 @@ a {
 
 section {
   display: flex;
-  justify-items: center;
-  align-items: center; }
+  justify-items: center; }
 
 #map {
   height: 60vh;
   width: 40%; }
+
+#section1 {
+  height: 100vh;
+  background-image: url("../images/BG-HEADER.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#section2 {
+  height: 100vh;
+  background-image: url("../images/BG1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#section3 {
+  height: 100vh;
+  background-image: url("../images/BG2-DESK.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#section4 {
+  height: 100vh;
+  background-image: url("../images/BG3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 /*# sourceMappingURL=style.css.map */

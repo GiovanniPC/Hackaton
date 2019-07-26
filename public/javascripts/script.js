@@ -3,7 +3,7 @@ function startMap() {
   const infowindow = new google.maps.InfoWindow();
 
   // Store Ironhack's coordinates
-  const SP = { lat: -23.5821604, lng: -46.6754915 };
+  const SP = { lat: -23.5613539, lng: -46.6604941 };
 
   // Initialize the map
   const map = new google.maps.Map(document.getElementById("map"), {
@@ -47,7 +47,7 @@ function startMap() {
           lat: position.coords.latitude,
           lng: position.coords.longitude
         };
-
+        console.log(user_location);
         // Add a marker for your user location
         const userLocation = new google.maps.Marker({
           position: {
