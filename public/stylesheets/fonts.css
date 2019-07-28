@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
+.MENU-Ubuntu-14pt {
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  text-align: left;
+  color: #563c2c;
+}
+
 .TITULO-Raleway-40pt {
   font-family: Raleway;
   font-size: 40px;
@@ -24,18 +36,6 @@
   color: #563c2c;
 }
 
-.TITULO-FOOTER-Raleway-18pt {
-  font-family: Raleway;
-  font-size: 18px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 1.8px;
-  text-align: left;
-  color: #ece8e3;
-}
-
 .TEXTO-MENOR-Raleway-18pt {
   font-family: Raleway;
   font-size: 18px;
@@ -45,19 +45,7 @@
   line-height: 1.33;
   letter-spacing: 0.54px;
   text-align: left;
-  color: #563c2c;
-}
-
-.Raleway-14pt {
-  font-family: Raleway;
-  font-size: 14px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 2.14;
-  letter-spacing: 1.4px;
-  text-align: left;
-  color: #ffffff;
+  color: #b97b54;
 }
 
 .TEXTO-LOJAS-Raleway-14pt {
@@ -72,22 +60,34 @@
   color: #563c2c;
 }
 
-.MENU-Ubuntu-14pt {
-  font-family: Ubuntu;
-  font-size: 14px;
-  font-weight: normal;
+.TITULO-FOOTER-Raleway-18pt {
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.8px;
   text-align: left;
-  color: #563c2c;
+  color: #ece8e3;
 }
 
 .TEXTO-FOOTER-Raleway-14pt {
   font-family: Raleway;
   font-size: 14px;
   font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.14;
+  letter-spacing: 1.4px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.Raleway-14pt {
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: 2.14;

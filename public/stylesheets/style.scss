@@ -8,18 +8,41 @@
 }
 */
 
-a:link, a:hover, a:visited {
-  color: #563c2c;
+body {
+  min-height: 75rem;
 }
 
-section .container h1 {
-  margin: 0 auto;
-  width: 70vw;
+.container {
+  /* width: 1366px; */
 }
-section .container p {
-  margin: 0 auto;
-  width: 70vw;
-  text-align: center;
+
+/* li.active {
+  background-color: #563c2c;
+  color: #ffffff;
+} */
+
+.navbar {
+  width: calc(100cw -56px)
+}
+
+a.menu.nav-link {
+  padding: .5rem 1.5rem;
+}
+
+a.menu:link, a.menu:hover, a.menu:visited {
+  color: #563c2c;
+}
+a.menu:hover {
+  background-color: #563c2c;
+  color: #ffffff;
+}
+
+.section {
+  padding-top: 4.5rem;
+}
+
+.navbar-toggler-icon {
+  background-image: url('../images/menuburguer.svg');
 }
 
 input {
@@ -44,21 +67,15 @@ input {
   // align-items: center;
 } */
 
-#map {
-  height: 60vh;
-  width: 40%;
-}
-
-#section1 {
+#home {
   height: 100vh;
   background-image: url('../images/BG-HEADER.jpg');
-  background-position-x: center;
-  background-position-y: bottom;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#section2 {
+#about {
   height: 100vh;
   background-image: url('../images/BG1.jpg');
   background-position-x: center;
@@ -67,7 +84,7 @@ input {
   background-size: cover;
 }
 
-#section3 {
+#nutrition {
   height: 100vh;
   background-image: url('../images/BG2-DESK.png');
   background-position-x: center;
@@ -76,7 +93,17 @@ input {
   background-size: cover;
 }
 
-#section4 {
+@media (max-width: 576px) {
+  #nutrition {
+    background-image: url('../images/BG2-MOBILE.png');
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+#benefits {
   height: 100vh;
   background-image: url('../images/BG3.jpg');
   background-position-x: center;
@@ -84,17 +111,57 @@ input {
   background-repeat: no-repeat;
   background-size: cover;
 }
+/* .carousel-item {
+  padding: 0 50px;
+} */
 
-#section5 {
+.carousel-control-prev-icon {
+  background-image: url(../images/SETA-ESQUERDA.png);
+  background-repeat: no-repeat;
+  height: 45px;
+  width: 24px;
+}
+
+.carousel-control-next-icon {
+  background-image: url(../images/SETA-DIREITA.png);
+  background-repeat: no-repeat;
+  height: 45px;
+  width: 24px;
+}
+
+#cupom {
   background-color: #ece8e3;
   /* #563c2c */
   background-position-x: center;
   background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
-#section6 {
+#cupom input {
+  border: 1px solid #b97b54;
+}
 
+#cupom .btn {
+  background-color: #563c2c;
+  color: #ffffff;
+}
+
+#stores {
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#map {
+  min-height: 40vh;
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  background-color: #563c2c;
+  color: #ffffff;
+  padding: 40px 0;
 }

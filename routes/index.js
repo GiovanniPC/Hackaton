@@ -63,7 +63,7 @@ router.post('/', (req, res) => {
     bairro === ""
   ) {
     res.render("index", {
-      message: "Algum dos campos ficou vazio!",
+      message: "Todos os campos são de preenchimento obrigatório!",
       GMAPS: process.env.GMAPS
     });
     return;
@@ -108,7 +108,7 @@ router.post('/', (req, res) => {
           <h3>Hi, there!</h3>
           <p>Please, click <a href="${process.env.BASE_URL}/${confirmationCode}" target="_blank">here</a> to confirm your account.</p>`,
         });
-      
+
         console.log('sendmail after');
         transporter.verify((error, success) => {
           console.log('verify');
