@@ -12,15 +12,6 @@ body {
   min-height: 75rem;
 }
 
-.container {
-  /* width: 1366px; */
-}
-
-/* li.active {
-  background-color: #563c2c;
-  color: #ffffff;
-} */
-
 .navbar {
   width: calc(100cw -56px)
 }
@@ -61,12 +52,6 @@ input {
   margin-top: 50px;
 }
 
-/* section {
-  display: flex;
-  justify-items: center;
-  // align-items: center;
-} */
-
 #home {
   //margin-top: 75px;
   height: 100vh;
@@ -102,6 +87,7 @@ input {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 /* .carousel-item {
   padding: 0 50px;
 } */
@@ -133,14 +119,6 @@ input {
   border: 1px solid #b97b54;
 }
 
-<<<<<<< HEAD
-#section5 img {
-  width: 100%;
-
-}
-
-#section6 {
-=======
 #cupom .btn {
   background-color: #563c2c;
   color: #ffffff;
@@ -192,7 +170,6 @@ footer {
     background-size: cover;
   }
 }
->>>>>>> dev-dave
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   color: #fff;
