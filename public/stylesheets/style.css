@@ -10,13 +10,6 @@
 body {
   min-height: 75rem; }
 
-.container {
-  /* width: 1366px; */ }
-
-/* li.active {
-  background-color: #563c2c;
-  color: #ffffff;
-} */
 .navbar {
   width: calc(100cw -56px); }
 
@@ -48,11 +41,6 @@ input {
 .mheader {
   margin-top: 50px; }
 
-/* section {
-  display: flex;
-  justify-items: center;
-  // align-items: center;
-} */
 #home {
   height: 100vh;
   background-image: url("../images/BG-HEADER.jpg");
@@ -107,11 +95,6 @@ input {
   background-repeat: no-repeat;
   background-size: cover; }
 
-<<<<<<< HEAD
-#section5 img {
-  width: 100%; }
-
-=======
 #cupom input {
   border: 1px solid #b97b54; }
 
@@ -157,5 +140,4 @@ footer {
   color: #fff;
   background-color: #563c2c; }
 
->>>>>>> dev-dave
 /*# sourceMappingURL=style.css.map */
