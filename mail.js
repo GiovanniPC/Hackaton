@@ -34,13 +34,3 @@ console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 }
 
 main().catch(console.error);
-
-/*
-Host smtp.sparkpostmail.com
-Port 587
-Alternative Port 2525
-Authentication AUTH LOGIN
-Encryption STARTTLS
-Username SMTP_Injection
-password: 452d52801b88584c40c03c698255951ff9e061c0
-*/

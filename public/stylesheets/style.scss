@@ -38,7 +38,7 @@ a.menu:hover {
 }
 
 .section {
-  padding-top: 4.5rem;
+  margin-top: 75px;
 }
 
 .navbar-toggler-icon {
@@ -68,6 +68,7 @@ input {
 } */
 
 #home {
+  //margin-top: 75px;
   height: 100vh;
   background-image: url('../images/BG-HEADER.jpg');
   background-position: center center;
@@ -91,16 +92,6 @@ input {
   background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-@media (max-width: 576px) {
-  #nutrition {
-    background-image: url('../images/BG2-MOBILE.png');
-    background-position-x: center;
-    background-position-y: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 }
 
 #benefits {
@@ -164,4 +155,37 @@ footer {
   background-color: #563c2c;
   color: #ffffff;
   padding: 40px 0;
+}
+
+@media (max-width: 576px) {
+  .section {
+    margin-top: 45px;
+  }
+
+  h1.TITULO-Raleway-40pt {
+    font-size: 24px;
+  }  
+  
+  p.TEXTO-Raleway-22pt{
+    font-size: 15px;
+  }  
+
+  #home {
+    background-position-x: 50%;
+    background-position-y: top;
+    background-size: cover;
+  }
+
+  #nutrition {
+    background-image: url('../images/BG2-MOBILE.png');
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #563c2c;
 }
