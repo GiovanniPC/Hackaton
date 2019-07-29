@@ -63,7 +63,7 @@ router.post('/', (req, res) => {
     bairro === ""
   ) {
     res.render("index", {
-      message: "Algum dos campos ficou vazio!",
+      message: "Todos os campos são de preenchimento obrigatório!",
       GMAPS: process.env.GMAPS
     });
     return;
@@ -87,28 +87,36 @@ router.post('/', (req, res) => {
     newUser.save()
       .then((userNew) => {
         console.log(email);
+        // const transporter = nodemailer.createTransport({
+        //   host: "smtp.sparkpostmail.com",
+        //   port: 587,
+        //   secure: false, // true for 465, false for other ports
+        //   authMethod: "LOGIN",
+        //   auth: {
+        //     user: process.env.SPARKPOST_USER, // generated ethereal user
+        //     pass: process.env.SPARKPOST_PASSWORD,
+        //     },
+        // })
         const transporter = nodemailer.createTransport({
-          host: "smtp.sparkpostmail.com",
-          port: 587,
-          secure: false, // true for 465, false for other ports
-          authMethod: "LOGIN",
+          host: 'smtp.mailtrap.io',
+          port: 2525,
           auth: {
-            user: process.env.SPARKPOST_USER, // generated ethereal user
-            pass: process.env.SPARKPOST_PASSWORD,
-            },
-        })
+            user: "55ba028025969d",
+            pass: "5f81c44419b7dc",
+          },
+        });
 
         console.log('sendmail');
         transporter.sendMail({
-          from:  '"My Awesome Project 👻" <cocogoods@gin.ink>',
+          from:  '"Cocogoods by SuperFoods 👻" <cocogoods@gin.ink>',
           to: email,
-          subject: 'Welcome to Lab Nodemail! Please confirm your account.',
-          text: `Please, click on the link below to confirm your account: ${process.env.BASE_URL}/${confirmationCode}`,
+          subject: 'Welcome to CocoGoods by SuperFoods.',
+          text: `Please, click on the link below to confirm your account: ${process.env.BASE_URL}/${confirmationCode}/#cupom`,
           html: `
           <h3>Hi, there!</h3>
-          <p>Please, click <a href="${process.env.BASE_URL}/${confirmationCode}" target="_blank">here</a> to confirm your account.</p>`,
+          <p>Please, click <a href="${process.env.BASE_URL}/${confirmationCode}/#cupom" target="_blank">here</a> to confirm your account.</p>`,
         });
-      
+
         console.log('sendmail after');
         transporter.verify((error, success) => {
           console.log('verify');
@@ -120,7 +128,7 @@ router.post('/', (req, res) => {
           }
         })
 
-        res.redirect("/");
+        res.redirect("/#cupom");
 
       })
       .catch(err => {

@@ -17,7 +17,6 @@ const MongoStore = require("connect-mongo")(session);
 
 const Admin = require("./models/admin");
 
-
 mongoose
   .connect(process.env.MONGODB_URI, { useNewUrlParser: true })
   .then(x => {
@@ -45,7 +44,6 @@ app.use(require('node-sass-middleware')({
   dest: path.join(__dirname, 'public'),
   sourceMap: true
 }));
-      
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -111,9 +109,7 @@ passport.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-
 const index = require('./routes/index');
 app.use('/', index);
-
 
 module.exports = app;
