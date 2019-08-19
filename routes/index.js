@@ -93,7 +93,7 @@ router.post('/', (req, res) => {
         //   secure: false, // true for 465, false for other ports
         //   authMethod: "LOGIN",
         //   auth: {
-        //     user: process.env.SPARKPOST_USER, // generated ethereal user
+        //     user: process.env.SPARKPOST_USER,
         //     pass: process.env.SPARKPOST_PASSWORD,
         //     },
         // })

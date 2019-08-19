@@ -7,6 +7,9 @@
   --camo-green: #473329;
 }
 */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   min-height: 75rem;
@@ -54,43 +57,51 @@ input {
 
 #home {
   //margin-top: 75px;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url('../images/BG-HEADER.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  clear: both;
 }
 
 #about {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url('../images/BG1.jpg');
   background-position-x: center;
   background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  clear: both;
 }
 
 #nutrition {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url('../images/BG2-DESK.png');
   background-position-x: center;
   background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  clear: both;
 }
 
 #benefits {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url('../images/BG3.jpg');
   background-position-x: center;
   background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  clear: both;
+}
+
+.frame {
+  border: 15px solid #ece8e3;
 }
 
 /* .carousel-item {
   padding: 0 50px;
-} */
+}
 
 .carousel-control-prev-icon {
   background-image: url(../images/SETA-ESQUERDA.png);
@@ -104,15 +115,17 @@ input {
   background-repeat: no-repeat;
   height: 45px;
   width: 24px;
-}
+} */
 
 #cupom {
+  min-height: 100vh;
   background-color: #ece8e3;
   /* #563c2c */
   background-position-x: center;
   background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  clear: both;
 }
 
 #cupom input {
@@ -125,10 +138,12 @@ input {
 }
 
 #stores {
+  //height: 100vh;
   background-position-x: center;
   background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  clear: both;
 }
 
 #map {
@@ -169,6 +184,12 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
   }
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display:block;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
